@@ -67,7 +67,99 @@ list=[1,2,3,3,"hello"]
 # list.sort()
 
 # print(list)
-lst1=[1,2,3]
-lst2=[2,3,4]
-print(lst1+lst2)
-print(lst1*2)
+# lst1=[1,2,3]
+# lst2=[2,3,4]
+# print(lst1+lst2)
+# print(lst1*2)
+# 
+
+# dict={"a":1,"b":2}
+# print(dict)
+
+# a={1,2,3,4,1}
+# print(a)
+
+# t=(1,2,3,1)
+# print(type(t))
+# print(t)
+# print(type(dict))
+# print(type(a))
+
+# a=5
+# b=5.4
+# c=5+3j
+# d=False
+# x=len(a)+len(b)+len(c)+len(d) ->error, len only take string as input
+# l="abc"
+# j="adc"
+# print(len(l)/len(j))
+# print(l//j)
+
+# a=1
+# b=0
+# c=-1
+# if a and b :
+    # print("hello")
+    # if b or c:
+        # print("hi")
+    # else:
+        # print("hii")
+# else:
+    # print("bye")
+
+# for i in range(1,11):
+    # print(i)
+
+# student={"name":"Hitesh","age":20,"branch":"csc"}
+# print(student["branch"]) # for extracting value of a key
+# student["age"]=22
+# student["phone no"]=1234567890
+# print(student)
+# print(student.keys())
+# print(student.values())
+
+# for key,val in student.items():
+    # print(key,val)
+
+
+
+# student={"Hitesh":{"age":20,"branch":"csc"},"Anurag":{"age":19,"branch":"csc"}}
+# for key,val in student.items():
+    #  print(key,val)
+
+# print(student["Hitesh"]["branch"])
+# name=["abc","qwe"]
+# def greet(name):
+    # for i in name:
+        # print(f"Hello {i} ,how are you")
+
+# greet(name)
+
+#lambda function
+# square=lambda x:x*x
+# print(square(10))
+import re
+def checkpassword(password):
+    score=0
+    if len(password)>=8:
+        score+=1
+    if re.search(r"[A-z]",password):
+        score+=1
+    if re.search(r"[0-9]",password):
+        score+=1
+    if re.search(r"[!@#$%^&*()<>,.?/:|\"]",password):
+        score+=1
+    
+    if score==1:
+        print("password is weak")
+    if score==2:
+        print("password is moderate")
+    if score==3:
+        print("password is strong")
+    if score==4:
+       print("password is very strong")
+     
+password=input("enter your password : ")
+checkpassword(password)
+    
+    
